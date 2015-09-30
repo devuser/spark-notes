@@ -1,3 +1,5 @@
+![bigdatareview_mindmap.png](http://www.taolch:8090/spark-notes/images/bigdatareview_mindmap.png)
+
 # 大数据工程师面试题
 ## 阅读指南
 - 下文的算法和模型两个词经常混用
