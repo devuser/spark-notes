@@ -1,4 +1,4 @@
-![bigdatareview_mindmap.png](http://www.i5life.com:8090/spark-notes/images/bigdatareview_mindmap.png)<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 --> - [阅读指南](#) - [Java部分](#java) - [大数据部分](#) - [数据分析](#) - [场景分析](#) - [一般项目经历](#) - [大数据项目经历](#) - [语言选择](#) - [职业生涯](#) - [新员工](#) - [关于修订](#)
+![bigdatareview_mindmap.png](http://www.i5life.com:8090/spark-notes/images/bigdatareview_mindmap.png)
 
 大数据工程师面试题
 ==================
