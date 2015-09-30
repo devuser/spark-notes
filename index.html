@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Spark-notes by devuser</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Spark-notes</h1>
+        <p>Note anything during writing spark or scala hadoop golfing gopher python review 大数据 面试题 面试 BAT</p>
+
+        <p class="view"><a href="https://github.com/devuser/spark-notes">View the Project on GitHub <small>devuser/spark-notes</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/devuser/spark-notes/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/devuser/spark-notes/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/devuser/spark-notes">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="sparknotes" class="anchor" href="#sparknotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>sparknotes</h1>
+
+<p>Note anything during writing spark or scala hadoop golfing gopher python review 大数据 面试题 面试 BAT</p>
+
+<p>本系列文档基于Spark 1.5撰写。</p>
+
+<h1>
+<a id="机器学习框架spark-mllib" class="anchor" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6spark-mllib" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>机器学习框架（Spark MLlib)</strong>
+</h1>
+
+<p>目前支持4种常见的机器学习问题：二元分类、回归、聚类以及协同过滤 - 依赖 （将会调用jblas线性代数库，这个库本身依赖于原生的Fortran程序 如果想用Python调用MLlib，需要安装NumPy 1.7或更新的版本 - 二元分类</p>
+
+<pre><code>是个监督学习问题。 目前支持两个适用于二元分类的标准模型家族：线性支持向量机（SVMs）和逻辑回归， 同时也分别适用于这两个模型家族的L1和L2正则化变体。
+
+这些训练算法都利用了一个底层的梯度下降基础算法。 二元分类算法的输入值是一个正则项参数（regParam）和多个与梯度下降相关的参数（stepSize，numIterations，miniBatchFraction）
+
+目前可用的二元分类算法：
+- **SVMWithSGD**
+- **LogisticRegressWithSGD**
+</code></pre>
+
+<ul>
+<li>线性回归</li>
+<li>聚类</li>
+<li>协同过滤 隐性反馈与协同反馈</li>
+<li>梯度下降基础算法</li>
+<li>二元分类</li>
+<li>线性回归</li>
+<li>聚类</li>
+<li>协同过滤</li>
+</ul>
+
+<h1>
+<a id="搭建hadoop单机版本和伪分布式开发环境" class="anchor" href="#%E6%90%AD%E5%BB%BAhadoop%E5%8D%95%E6%9C%BA%E7%89%88%E6%9C%AC%E5%92%8C%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>搭建Hadoop单机版本和伪分布式开发环境</h1>
+
+<p><code>sudo -s</code>进入<strong>root</strong>用户权限模式</p>
+
+<p><code>apt-get install vim</code></p>
+
+<p>Hadoop是采用SSH进行通讯的，此时要设置密码为空， 即不需要密码登录，这样免去每次通讯时都输入密码。</p>
+
+<p><code>apt-get install ssh</code></p>
+
+<p>安装完毕后启动SSH服务</p>
+
+<p><code>/etc/init.d/ssh start</code></p>
+
+<p>以下命令验证服务是否正常启动</p>
+
+<p><code>ps -e|grep ssh</code></p>
+
+<p>如下命令产生私钥和公钥</p>
+
+<p><code>ssh-keygen -t rsa -P ""</code></p>
+
+<p>使用Java自带的jps命令查询出所有的守护进程:</p>
+
+<p>__ <a href="https://github.com/todo" class="user-mention">@todo</a>插入图片__ - 创建HDFS的文件夹<em>/input</em> <code>bin/hadoop dfs -mkdir /input</code> - 复制本地的配置文件到HDFS文件夹<em>/input</em> <code>bin/hadoop dfs -copyFromLocal etc/hadoop/*.xml /input</code> - 在刚刚构建的伪分布式模式下运行自带的<em>wordcount</em>程序 <code>bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar wordcount /input /output</code></p>
+
+<h1>
+<a id="开始第一个测试案例" class="anchor" href="#%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>开始第一个测试案例</h1>
+
+<ul>
+<li>启动Spark集群的Mater <code>$SPARK_HOME/sbin/start-master.sh</code>
+</li>
+<li>启动Spark集群的Slaves <code>$SPARK_HOME/sbin/start-slaves.sh</code>
+</li>
+<li>启动Hadoop集群<code>/data/hadoop/sbin/start-all.sh</code>
+</li>
+</ul>
+
+<p><code>hadoop dfs -copyFromLocal ./README.md /</code></p>
+
+<p><code>val file = sc.textFile("hdfs://inside-bigdata04:9000/README.md")</code></p>
+
+<p><code>file.filter(line =&gt; line.contains("Spark"))</code></p>
+
+<h2>
+<a id="查看hdfs的文件或文件夹" class="anchor" href="#%E6%9F%A5%E7%9C%8Bhdfs%E7%9A%84%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>查看HDFS的文件或文件夹</h2>
+
+<ul>
+<li><code>hadoop dfs -get  hdfs://10.104.19.122:9000/foo.md</code></li>
+<li>查看文件末尾的若干行 <code>hadoop dfs -tail -f hdfs://10.104.19.122:9000/README.md</code>
+</li>
+<li>列举HDFS的文件或文件夹 <code>hadoop dfs -ls  hdfs://10.104.19.122:9000/</code>
+</li>
+</ul>
+
+<p>目前推荐如下命令</p>
+
+<p><code>hdfs dfs -ls /</code></p>
+
+<p><code>hdfs dfs -ls  hdfs://$HADOOP_MASTER_ID:9000/</code></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/devuser">devuser</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
