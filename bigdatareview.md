@@ -1,4 +1,4 @@
-![bigdatareview_mindmap.png](http://www.taolch:8090/spark-notes/images/bigdatareview_mindmap.png)
+![bigdatareview_mindmap.png](http://www.i5life.com:8090/spark-notes/images/bigdatareview_mindmap.png)
 
 # 大数据工程师面试题
 ## 阅读指南
