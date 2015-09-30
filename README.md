@@ -48,7 +48,7 @@ Hadoop是采用SSH进行通讯的，此时要设置密码为空， 即不需要�
 
 使用Java自带的jps命令查询出所有的守护进程:
 
-*_ @todo插入图片\_* - 创建HDFS的文件夹_/input_ `bin/hadoop dfs -mkdir /input` - 复制本地的配置文件到HDFS文件夹_/input_ `bin/hadoop dfs -copyFromLocal etc/hadoop/*.xml /input` - 在刚刚构建的伪分布式模式下运行自带的_wordcount_程序 `bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar wordcount /input /output`
+__ @todo插入图片\__ - 创建HDFS的文件夹_/input_ `bin/hadoop dfs -mkdir /input` - 复制本地的配置文件到HDFS文件夹_/input_ `bin/hadoop dfs -copyFromLocal etc/hadoop/*.xml /input` - 在刚刚构建的伪分布式模式下运行自带的_wordcount_程序 `bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar wordcount /input /output`
 
 # 开始第一个测试案例
 - 启动Spark集群的Mater `$SPARK_HOME/sbin/start-master.sh`
