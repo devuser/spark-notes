@@ -31,9 +31,40 @@
         <h1>
 <a id="sparknotes" class="anchor" href="#sparknotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>sparknotes</h1>
 
-<p>Note anything during writing spark or scala hadoop golfing gopher python review 大数据 面试题 面试 BAT</p>
+<p>Note anything during writing spark or scala python php golang gopher bigdata hadoop review 大数据 面试 面试题 大数据面试题</p>
+
+<p><a href="stepbystepfromsrc.md">从源代码开始</a></p>
+
+<p><a href="powerdesigner.md">PowerDesigner</a></p>
+
+<p><a href="spark-bat.md">SPARK解决BAT问题</a></p>
+
+<p><a href="case1_wordcount.md">编写第一个Spark程序</a></p>
+
+<p><a href="MLlib.md">机器学习</a></p>
+
+<p><a href="recommenddation_in_douban.md">推荐在豆瓣</a></p>
+
+<p><a href="bigdatareview.md">大数据面试题</a></p>
 
 <p>本系列文档基于Spark 1.5撰写。</p>
+
+<h2>
+<a id="幸福生活从docker开始" class="anchor" href="#%E5%B9%B8%E7%A6%8F%E7%94%9F%E6%B4%BB%E4%BB%8Edocker%E5%BC%80%E5%A7%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>幸福生活从Docker开始</h2>
+
+<p>在DockerHub搜索Spark <code>docker search -s 2 spark</code></p>
+
+<p>存在若干个Spark镜像，推荐选择 _ sequenceiq/spark _ 执行如下命令拉取 ｀docker pull sequenceiq/spark`</p>
+
+<p>有强迫症的同学建议执行如下命令拉取该镜像的所有版本</p>
+
+<p><code>docker pull -a sequenceiq/spark</code></p>
+
+<p>拉取所有的版本是有意义的，因为Spark处在快速成长期，年初到现在从_ 1.2 _ 版本迭代到_ 1.5 _</p>
+
+<p>目前市面上流行的印刷品的书，多数还是基于_ 1.2 _ 版本。 作为初学者来说，遇到版本差异，会非常痛苦。</p>
+
+<p>所以我建议，使用与您印刷品的书一致的Spark版本。</p>
 
 <h1>
 <a id="机器学习框架spark-mllib" class="anchor" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6spark-mllib" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>机器学习框架（Spark MLlib)</strong>
@@ -86,7 +117,7 @@
 
 <p>使用Java自带的jps命令查询出所有的守护进程:</p>
 
-<p>__ <a href="https://github.com/todo" class="user-mention">@todo</a>插入图片__ - 创建HDFS的文件夹<em>/input</em> <code>bin/hadoop dfs -mkdir /input</code> - 复制本地的配置文件到HDFS文件夹<em>/input</em> <code>bin/hadoop dfs -copyFromLocal etc/hadoop/*.xml /input</code> - 在刚刚构建的伪分布式模式下运行自带的<em>wordcount</em>程序 <code>bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar wordcount /input /output</code></p>
+<p>** <a href="https://github.com/todo" class="user-mention">@todo</a>插入图片** - 创建HDFS的文件夹<em>/input</em> <code>bin/hadoop dfs -mkdir /input</code> - 复制本地的配置文件到HDFS文件夹<em>/input* `bin/hadoop dfs -copyFromLocal etc/hadoop/</em>.xml /input<code>- 在刚刚构建的伪分布式模式下运行自带的_wordcount_程序</code>bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar wordcount /input /output`</p>
 
 <h1>
 <a id="开始第一个测试案例" class="anchor" href="#%E5%BC%80%E5%A7%8B%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>开始第一个测试案例</h1>
