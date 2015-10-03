@@ -1,5 +1,8 @@
 # sparknotes
-Note anything during writing spark or scala python php golang gopher bigdata hadoop review 大数据 面试 面试题 大数据面试题
+Note anything during writing spark or scala python php golang gopher bigdata hadoop review 大数据 面试 面试题 大数据面试题 作者在Github的博客列表
+- [Spark 笔记](http://devuser.github.io/spark-notes)
+- [Docker 笔记](http://devuser.github.io/docker-notes)
+- [Golang 笔记](http://devuser.github.io/golang-notes)
 
 [从源代码开始](stepbystepfromsrc.md)
 
