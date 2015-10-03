@@ -15,7 +15,9 @@ Note anything during writing spark or scala python php golang gopher bigdata had
 
 [大数据面试题](bigdatareview.md)
 
-本系列文档基于Spark 1.5撰写。
+本系列文档基于`Spark 1.5-Hadoop 2.6`撰写。
+
+如果没有特殊声明，文档中案例在`Cent OS 6.X`系列下为准， 其他操作系统请参考。
 
 ## 幸福生活从Docker开始
 在DockerHub搜索Spark `docker search -s 2 spark`
