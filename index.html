@@ -51,11 +51,205 @@
 
 <p><a href="recommenddation_in_douban.md">推荐在豆瓣</a></p>
 
-<p><a href="bigdatareview.md">大数据面试题</a></p>
-
 <p>本系列文档基于<code>Spark 1.5-Hadoop 2.6</code>撰写。</p>
 
 <p>如果没有特殊声明，文档中案例在<code>Cent OS 6.X</code>系列下为准， 其他操作系统请参考。</p>
+
+<p><img src="http://www.i5life.com:8090/spark-notes/images/bigdatareview_mindmap.png" alt="bigdatareview_mindmap.png"></p>
+
+<h1>
+<a id="大数据工程师面试题" class="anchor" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%9D%A2%E8%AF%95%E9%A2%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>大数据工程师面试题</h1>
+
+<h2>
+<a id="阅读指南" class="anchor" href="#%E9%98%85%E8%AF%BB%E6%8C%87%E5%8D%97" aria-hidden="true"><span class="octicon octicon-link"></span></a>阅读指南</h2>
+
+<ul>
+<li>下文的算法和模型两个词经常混用</li>
+<li>很多技术问题可能没有标准答案，但是需要描述自己的关注点，或自己的理解</li>
+<li>鼓励表达一些倾向性的观点，或一些基于实践的观点</li>
+</ul>
+
+<h2>
+<a id="java部分" class="anchor" href="#java%E9%83%A8%E5%88%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>Java部分</h2>
+
+<ol>
+<li>Java内存垃圾收集器是怎么工作的？</li>
+<li>Java内存分为哪几个区域？相互之间是如何转化地？</li>
+<li>Java 1.7和1.8有什么改变呢？</li>
+<li>HashMap和HashTable有什么区别？</li>
+<li>请说一下你对Java关键字 <code>synchronized</code> 的理解，如果你不懂Java语言的话，也请尝试说说你对 <code>synchronized</code> 的理解</li>
+<li>Java为什么会推出Java <code>NIO</code>（New I/O），在 <code>NIO</code>中有哪几个核心对象（缓冲区 <code>Buffer</code>、通道<code>Channel</code>、选择器<code>Selector</code>)</li>
+<li>如果Java源代码显示调用内存回收，将会发生什么？</li>
+<li>Windows 32位机器上Java内存具有什么特征？</li>
+<li>Java项目不进行任何调整，直接从32位机器Java虚拟机迁移到64位机器Java虚拟机，速度会提升吗？</li>
+</ol>
+
+<pre><code>在Java1.4之前的I/O系统中，提供的都是面向流的I/O系统，系统一次一个字节地处理数据，
+一个输入流产生一个字节的数据，一个输出流消费一个字节的数据，面向流的I/O速度非常慢，
+而在Java 1.4中推出了NIO，这是一个面向块的I/O系统，系统以块的方式处理处理，
+每一个操作在一步中产生或者消费一个数据库，按块处理要比按字节处理数据快的多。
+在NIO中有几个核心对象需要掌握：缓冲区（Buffer）、通道（Channel）、选择器（Selector）。
+</code></pre>
+
+<h2>
+<a id="大数据部分" class="anchor" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%83%A8%E5%88%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>大数据部分</h2>
+
+<ol>
+<li>MongoDB和Hadoop有什么区别？是同类型的产品吗？</li>
+<li>如果我告诉你Hadoop已经是大数据领域的事实标准，那么你分析哪几个方面帮助Hadoop成为事实标准呢？</li>
+<li>请描述你理解的数据仓库</li>
+<li>数据仓库和大数据有什么区别？</li>
+<li>数据集市和数据仓库有什么区别？</li>
+<li>数据集市一定不可以接受吗？为什么不可以接受？</li>
+<li>大数据技术除了Hadoop流派之外，还有哪些流派？</li>
+<li>Spark和Hadoop的区别？在大数据技术体系中各自扮演什么角色？</li>
+<li>Spark有哪些组成部分，Spark的架构基础是什么，或基于什么模型构建的？</li>
+<li>你知道大数据有哪些数据来源，各自有什么流行的工具？</li>
+<li>说说你大数据知识的来源
+
+<ul>
+<li>国内流行的大数据书籍</li>
+<li>希望获得你热衷从官网获取新知</li>
+<li>观念更新大于知识贮备</li>
+<li>知识获取大于知识继承（强调外语和自学习能力）</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="数据分析" class="anchor" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>数据分析</h2>
+
+<ol>
+<li>你了解机器学习吗？</li>
+<li>请讲述你了解或熟知的机器学习算法？</li>
+<li>数据采集环节经常遇到哪几类问题？说说自己对这几类问题的理解</li>
+<li>Spark和SPSS的区别？说说各自擅长的领域？</li>
+<li>Excel可以实现哪些数据分析呢？</li>
+<li>你了解R语言，R语言可以完成什么类型的任务？</li>
+<li>数据抽样有哪些注意事项？如果我们有30万左右的样本，那么需要抽取多少呢？</li>
+<li>数据抽样或统计学实验有哪几个评价指标？请描述一到两个案例来说明评价指标</li>
+</ol>
+
+<h2>
+<a id="场景分析" class="anchor" href="#%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>场景分析</h2>
+
+<ol>
+<li>说说你对我们公司的理解？</li>
+<li>根据你的了解，我们公司的产品具有哪些特征？</li>
+<li>我们主要的客户群体是什么？怎么描述我们的客户群体？</li>
+<li>如果你作为VP的话，你会怎么细分我们的客户群体？</li>
+<li>如果强迫你规划未来18个月的依托大数据技术的产品，你会怎么规划我们的产品线呢？</li>
+</ol>
+
+<h2>
+<a id="一般项目经历" class="anchor" href="#%E4%B8%80%E8%88%AC%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>一般项目经历</h2>
+
+<ol>
+<li>介绍你过去成功或参与度较高的项目经历，在里面担负的角色</li>
+<li>在过去的项目经历中，请描述3个案例来证明你的技术能力很强</li>
+<li>在过去的项目经历中，请描述3个应急场景证明你的技术能力很强</li>
+<li>如果给你三分钟来介绍自己，那么你愿意介绍自己的哪几个方面的优秀特征呢？</li>
+<li>难道仅仅认为自己在技术领域是优秀的？（秒杀技术控，面试官希望看到你的综合能力）</li>
+</ol>
+
+<h2>
+<a id="大数据项目经历" class="anchor" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86" aria-hidden="true"><span class="octicon octicon-link"></span></a>大数据项目经历</h2>
+
+<ol>
+<li>你曾经参与或主导过哪些大数据类型的项目？项目目标是什么？你具体担负的哪个角色？ 使用哪些算法？</li>
+<li>使用哪些统计方法？</li>
+<li>如果解决用户商品匹配的话，你会采用什么类型的模型？ 二部图模型有什么缺陷？对应有什么改进模型？</li>
+<li>标签系统有什么特征？有什么问题？</li>
+<li>用户行为分析有什么模型？</li>
+<li>说说你曾经项目中的模型迭代过程？</li>
+<li>成功的大数据项目具有哪些特征？</li>
+<li>你认为大数据技术包括哪些组成部分？</li>
+<li>你认为大数据项目成功的关键是什么？</li>
+<li>大数据和企业内外哪些部门关联比较密切？</li>
+<li>你过去项目的SLA包涵哪些指标？</li>
+<li>如果你参与到我们的大数据项目中，你愿意设计哪些SLA指标？</li>
+<li>Web或移动端的时代，我们有哪些数据采集的方法？（如果能够说出来GA最佳）</li>
+<li>针对Web或移动端，你认为可以设置哪些观测点？</li>
+<li>在原始数据采集的基础上，可以做哪些指标呢？</li>
+<li>如果从观察点提取出来50个观测指标，那么你在向高层汇报前你做哪些准备工作呢？ （基础指标的基础上，你需要继续抽象，或分解为若干个领域，或绘制曲线）</li>
+<li>周日晚上接到高层的电话通知，周一早晨9点半参加一个<strong>重要会议</strong>。该重要会有由公司内外部的重要人士参加。要求你在会议上介绍你主导的大数据项目工作。然后你会做什么？</li>
+</ol>
+
+<pre><code>- 有哪些类型的人士参加？如果能够具体到名字最佳？
+- 各自的诉求是什么？
+- 会议的召集者希望你表达什么？
+- 会议分为哪几个阶段？
+- 会议室大小？是否有投影设备？是否需要准备纸质件？
+- 如果说自己立即去调试系统，或者准备PPT，那么是完败
+</code></pre>
+
+<h2>
+<a id="语言选择" class="anchor" href="#%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>语言选择</h2>
+
+<ol>
+<li>你熟知哪些开发语言或工具类软件？</li>
+<li>你写日记吗？如果不写日记的话，你采用哪些工具或方式来记录自己的知识呢？</li>
+<li>你了解PHP、Python吗？说说你对这两门语言的理解</li>
+<li>你知道哪些JavaScript前端技术框架？特点是什么？</li>
+<li>如果因项目需要，你愿意介绍并且主动学习一门开发语言或工具吗？</li>
+<li>说说你曾经快速学习一门开发语言的经历？</li>
+</ol>
+
+<h2>
+<a id="职业生涯" class="anchor" href="#%E8%81%8C%E4%B8%9A%E7%94%9F%E6%B6%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a>职业生涯</h2>
+
+<ol>
+<li>你愿意成为不参与底层代码的算法专家吗？或模型工程师？</li>
+<li>你认为大数据领域有哪些发展方向？五年或十年后你愿意成为哪个角色？</li>
+<li>参与大数据项目，你认为哪些是关键干系人？</li>
+<li>如果让你领导一个大数据项目，你认为分解为几个阶段？</li>
+<li>你怎么向公司高层介绍或请求发起一个大数据项目？</li>
+<li>你怎么解决大数据项目和公司现有业务系统的关系？</li>
+<li>大数据项目和各种日志分析系统间有什么区别？</li>
+<li>你怎么面向公众或无关者，比如记者、你的家人、你的私人朋友介绍你主导的大数据项目？</li>
+</ol>
+
+<h2>
+<a id="新员工" class="anchor" href="#%E6%96%B0%E5%91%98%E5%B7%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>新员工</h2>
+
+<ul>
+<li>新员工报道第一天，你准备作什么？</li>
+</ul>
+
+<pre><code>  - 关键词新员工手册，强调过程资产
+  - 按照新员工手册走完全程
+  - 确保实现最基本的工作环境
+  - 总结记录自己遇到的问题，并尝试更新新员工手册
+</code></pre>
+
+<ul>
+<li>你怎么规划自己入职第一周的工作？</li>
+</ul>
+
+<pre><code>    - 谁是你的主管，多数情况下入职前就认识了 和主管一起沟通你的职业规划和工作规划
+    - 你业务范围内的关联部门？拜访关联部门领导
+    - 人事、财务、行政 - 你主要的客户群体？或主要的客户？
+    - 你怎么规划自己入职前3个月的工作？
+</code></pre>
+
+<ul>
+<li>如果要求你做为公司的大数据培训讲师，你愿意和受众分享哪三条经验或心得呢？</li>
+</ul>
+
+<h2>
+<a id="关于修订" class="anchor" href="#%E5%85%B3%E4%BA%8E%E4%BF%AE%E8%AE%A2" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于修订</h2>
+
+<p>上述面试题目，是我作为面试官或求职者而总结的，不足之处，敬请修订。 也可以邮件给我。</p>
+
+<p>提醒读者，直接针对题目的准备是无用的，鼓励对题目背后的领域进行深入的了解。 请正确的方式的来阅读本文。</p>
+
+<p>支持邮箱: <a href="mailto:pythoner@icloud.com">pythoner@icloud.com</a></p>
+
+<pre><code>大数据工程师面试题到此结束
+</code></pre>
+
+<h1>
+<a id="spark-step-by-step" class="anchor" href="#spark-step-by-step" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spark Step by Step</h1>
 
 <h2>
 <a id="幸福生活从docker开始" class="anchor" href="#%E5%B9%B8%E7%A6%8F%E7%94%9F%E6%B4%BB%E4%BB%8Edocker%E5%BC%80%E5%A7%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>幸福生活从Docker开始</h2>
