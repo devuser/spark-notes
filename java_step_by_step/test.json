@@ -1,0 +1,11 @@
+{
+  "account": "pythoner@me.com",
+  "account_id": 3,
+  "charge_value": 0,
+  "hello": "world",
+  "money": 2319,
+  "phone_mob": "",
+  "status": "CHARGECARDDONE",
+  "user_id": 4,
+  "user_name": ""
+}

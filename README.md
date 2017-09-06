@@ -249,4 +249,22 @@ Hadoop是采用SSH进行通讯的，此时要设置密码为空， 即不需要�
 
 `hdfs dfs -ls /`
 
-`hdfs dfs -ls  hdfs://$HADOOP_MASTER_ID:9000/`
+下面给出在Hadoop 2.6版本的命令组合
+- 列举远程hdfs的文件或文件夹 `hdfs dfs -ls  hdfs://$HADOOP_MASTER_ID:9000/`
+- 删除hdfs的文件夹 `hdfs dfs -ls hdfs://$HADOOP_MASTER_ID:9000/XXXX.csv`
+
+# SBT
+##名字的由来
+
+类似yum一样，始终致力于发明新的轮子，每个轮子都说自己在解决前辈不能解决的问题。 或者比前辈更佳高校。 SBT，我实际使用过程中，发现
+- 从语法或使用习惯来说，更加匹配Scala
+- 用类似编程语言的方式书写，胜过XML
+- 包的管理更高效，兼容Maven
+
+在打包前，偶尔发生未能跟踪最新修改的情况， 也就说希望每次打包使用如下命令组合
+
+```
+sbt clean compile package
+```
+
+如果简单使用`sbt package`可能没应用最新的源代码或包依赖关系。
