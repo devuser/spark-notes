@@ -1,7 +1,13 @@
 sparknotes
 ==========
 
-Note anything during writing spark or scala python php golang gopher bigdata hadoop review 大数据 面试 面试题 大数据面试题 作者在Github的博客列表 - [Spark 笔记](http://devuser.github.io/spark-notes) - [Docker 笔记](http://devuser.github.io/docker-notes) - [Golang 笔记](http://devuser.github.io/golang-notes)
+Note anything during writing spark or scala python php golang gopher bigdata hadoop review 大数据 面试 面试题 大数据面试题 作者在Github的博客列表 
+
+- [Spark 笔记](http://devuser.github.io/spark-notes) 
+
+- [Docker 笔记](http://devuser.github.io/docker-notes) 
+
+- [Golang 笔记](http://devuser.github.io/golang-notes)
 
 [从源代码开始](stepbystepfromsrc.md)
 
@@ -15,27 +21,15 @@ Note anything during writing spark or scala python php golang gopher bigdata had
 
 [推荐在豆瓣](recommenddation_in_douban.md)
 
-[Python 00-01](Python00-01.md)
+[Python 00-01](./django-leaning/ch00-enviroment/ch00-01.md)
 
-[Python 00-02](Python00-02.md)
+[Python 00-02](./django-leaning/ch00-enviroment/ch00-02.md)
 
-[Python 00-03](Python00-03.md)
+[Python 00-03](./django-leaning/ch00-enviroment/ch00-03-docker-readme.md)
 
-[Python 00-04](Python00-04.md)
+[Python 00-04](./django-leaning/ch00-enviroment/ch00-04-zsh-readme.md)
 
-[Python 01-01](Python01-01.md)
 
-[Python 01-02](Python01-02.md)
-
-[Python 02-01](Python02-01.md)
-
-[Python 02-02](Python02-02.md)
-
-[Python 02-03](Python02-03.md)
-
-[Python 02-04](Python02-04.md)
-
-[Python 03-01](Python03-01.md)
 
 本系列文档基于`Spark 1.5-Hadoop 2.6`撰写。
 
