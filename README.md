@@ -21,13 +21,13 @@ Note anything during writing spark or scala python php golang gopher bigdata had
 
 [推荐在豆瓣](recommenddation_in_douban.md)
 
-[Python 00-01](./django-leaning/ch00-enviroment/ch00-01.md)
+[Python 00-01](django-leaning/ch00-enviroment/ch00-01.md)
 
-[Python 00-02](./django-leaning/ch00-enviroment/ch00-02.md)
+[Python 00-02](django-leaning/ch00-enviroment/ch00-02.md)
 
-[Python 00-03](./django-leaning/ch00-enviroment/ch00-03-docker-readme.md)
+[Python 00-03](django-leaning/ch00-enviroment/ch00-03-docker-readme.md)
 
-[Python 00-04](./django-leaning/ch00-enviroment/ch00-04-zsh-readme.md)
+[Python 00-04](django-leaning/ch00-enviroment/ch00-04-zsh-readme.md)
 
 
 
